@@ -28,8 +28,11 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-# Vue
-## Vue遇到的问题
+# NODE
+## NODE遇到的知识点的理解
 ```
-
+1.EventEmitter  这个E要大写，否则找不到该元素
+2.对node的理解
+关于node的事件，很像电路图。最关键的一个emit是主要开关，其余的emit是各自的小开关，而on就是每个线路都接好了，等到什么时候住开关按下，走到哪个on监听的开关上，哪个开关就打开执行，打开电路。
+有个重要的一点，是我的主开关要放在最后面，相当于这个总开关要放在我的眼跟前的感觉
 ```
