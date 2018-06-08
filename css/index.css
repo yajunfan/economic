@@ -29,3 +29,12 @@ ul,li{
 .fwb{
     font-weight: bolder;
 }
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    bottom: 10px;
+    background: lightgrey;
+    
+}
