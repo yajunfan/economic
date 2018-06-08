@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style: none;
+}
+.red{
+    color: red;
+}
+.green{
+    color:green;
+}
+.d-i-b{
+    display: inline-block;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.tlc{
+    text-align: center;
+}
+.tdu{
+    text-decoration: underline;
+}
+.fwb{
+    font-weight: bolder;
+}
