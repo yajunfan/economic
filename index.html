@@ -12,14 +12,13 @@
         <ul>
             <li>1.EventEmitter  这个E要大写，否则找不到该元素</li>
             <h2>2.对node的理解</h2>
-            <li>1>关于node的事件，很像电路图。最关键的一个emit是主要开关，其余的emit是各自的小开关，
-                而on就是每个线路都接好了，等到什么时候住开关按下，走到哪个on监听的开关上，哪个开关
+            <li>1>关于node的事件，很像电路图。最关键的一个emit是主要开关，其余的emit是各自的小开关，而on就是每个线路都接好了，等到什么时候住开关按下，走到哪个on监听的开关上，哪个开关
                 就打开执行，打开电路。
                 有个重要的一点，是我的主开关要放在最后面，相当于这个总开关要放在我的眼跟前的感觉;
             </li>
-            <li>2>.关于fs的问题，var <span style="color:red">readsteam</span> = fs.<span style="color:red">createReadStream</span>('input.txt')[这是源文件];
-                var <span style="color:green">writeSream</span> = fs.<span style="color:green">createWriteStream</span>('output.txt')[这是要写入的那个文件];
-                readsteam.pipe(writeSream); 就将input.txt中的内容写入了output.txt文件中，会完全覆盖output中的内容
+            <li>2>.关于fs的问题，var <span style="color:red">readsteam</span> = fs.<span style="color:red">createReadStream</span>('input.txt')[这是源文件];<br>
+                var <span style="color:green">writeSream</span> = fs.<span style="color:green">createWriteStream</span>('output.txt')[这是要写入的那个文件];<br>
+                readsteam.pipe(writeSream); 就将input.txt中的内容写入了output.txt文件中，会完全覆盖output中的内容<br>
             </li>
         </ul>
     </div>
