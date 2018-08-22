@@ -29,45 +29,52 @@
             </li>
             <li><h4>四. 关于模块</h4>
                 对我而言，相当于是有一个公共的文件，其中放入很多我自己封装的方法，比如 <b>util.js</b>
-                <textarea  cols="30" rows="10">
-                那么在我的util.js中，我会这么写<br>
-                    exports.Utils={<br>
-                       aa:function(){相关逻辑},<br>
-                       bb:function(){相关逻辑},<br>
-                       cc:function(){相关逻辑},<br>
-                       ...<br>
-                    };<br>
-                在别的js页面，比如main.js页面，直接引入utils<br>
-                   var Utils = require('./utils');(这个就是这个utils的相对位置，根据自己的文件进行跳转)<br>
-                   在这个页面能调用utils的方法<br>
-                   Utils.aa();<br>
-                   Utils.bb();<br>
-                   ...<br>
-                   <hr>
-                   有时候我们只是想把一个对象封装到模块中，格式如下：<br>
-                    module.exports = function() {<br>
-                        ...<br>
-                    }<br>
-                    那我们在utils的文件中这么写<br>
-                    function Utils() { <br>
-                        var name; <br>
-                        this.aa = function(thyName) { <br>
-                            name = thyName; <br>
-                        }; <br>
-                        this.bb = function() { <br>
-                            console.log('Hello ' + name); <br>
-                        }; <br>
-                    }; <br>
-                    module.exports = Hello;<br>
-                    在main.js中<br>
-                    var Utils = require('./Utils'); <br>
-                    Utils = new Utils(); <br>
-                    Utils.aa('BYVoid'); <br>
-                    Utils.bb();<br>
-                    <hr>
-                    这两者的区别呢：<br>
+                <textarea  rows="10" class="" style="width: 100%;">
+                那么在我的util.js中，我会这么写
+                    exports.Utils={
+                       aa:function(){相关逻辑},
+                       bb:function(){相关逻辑},
+                       cc:function(){相关逻辑},
+                       ...
+                    };
+                在别的js页面，比如main.js页面，直接引入utils
+                   var Utils = require('./utils');(这个就是这个utils的相对位置，根据自己的文件进行跳转)
+                   在这个页面能调用utils的方法
+                   Utils.aa();
+                   Utils.bb();
+                   ...
+                   有时候我们只是想把一个对象封装到模块中，格式如下：
+                    module.exports = function() {
+                        ...
+                    }
+                    那我们在utils的文件中这么写
+                    function Utils() {
+                        var name; 
+                        this.aa = function(thyName) { 
+                            name = thyName; 
+                        }; 
+                        this.bb = function() { 
+                            console.log('Hello ' + name);
+                        }; 
+                    }; 
+                    或者导出的是一个对象
+                    var Utils = function(){
+                        var obj={
+                            aa:function(){console.log('aaaa')  },
+                            bb:function () {console.log('bbdd')  },
+                            cc:function () {console.log('dsdfsf')  }
+                        }
+                        return obj;
+                    };
+                    module.exports = Utils;
+                    在main.js中
+                    var Utils = require('./Utils');
+                    Utils = new Utils(); 
+                    Utils.aa('BYVoid');
+                    Utils.bb();
                 </textarea>
-                <h4>模块接口的唯一变化是使用 module.exports = Hello 代替了exports.world = function(){}。 在外部引用该模块时，其接口对象就是要输出的 Hello 对象本身，而不是原先的 exports。</h4>
+                这两者的区别呢：<br>
+                <b>模块接口的唯一变化是使用 module.exports = Hello 代替了exports.world = function(){}。 在外部引用该模块时，其接口对象就是要输出的 Hello 对象本身，而不是原先的 exports。</b>
            </li>
         </ul>
         <div class="footer tlc">访问网址：https://yajunfan.github.io/economic/</div>
